@@ -2,7 +2,8 @@ export default {
   urls: [
     '/',
     '/next-image/',
-    '/code-splitting/'
+    '/code-splitting/',
+    '/swr/'
   ],
 }
 
