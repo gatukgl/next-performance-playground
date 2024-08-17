@@ -22,7 +22,7 @@ const SWRPage = () => {
     }
   }
 
-  const { data } = useSWR(apiUrl, fetcher)
+  const { data } = useSWR(!cache.get(apiUrl) ? apiUrl : null, fetcher)
 
   const handleOnClick = () => {
     const newState = !isShowDogBreeds
