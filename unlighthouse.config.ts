@@ -1,8 +1,8 @@
 export default {
   urls: [
     '/',
-    '/next-image',
-    '/code-splitting'
+    '/next-image/',
+    '/code-splitting/'
   ],
 }
 
