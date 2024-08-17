@@ -8,6 +8,7 @@ export default function Home() {
 
       <section className="min-h-screen grid md:grid-cols-3 gap-4">
         <Card image={cardImage} title="Use next/image" description="Description 1" path='/next-image' />
+        <Card image={cardImage} title="Code splitting for client component" description="Description 1" path='/code-splitting' />
       </section>
     </main>
   );
