@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { Card } from "@/components/Card";
+import cardImage from '../../public/card-img.jpg';
 
 export default function Home() {
   return (
@@ -6,6 +7,12 @@ export default function Home() {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         Gatuk
       </div>
+
+      <section>
+        <Card image={cardImage} title="Card 1" description="Description 1" />
+        <Card image={cardImage} title="Card 1" description="Description 1" />
+        <Card image={cardImage} title="Card 1" description="Description 1" />
+      </section>
     </main>
   );
 }
