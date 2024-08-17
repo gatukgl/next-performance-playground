@@ -3,12 +3,13 @@ import cardImage from '../../public/card-img.jpg';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        Gatuk
-      </div>
+    <main>
+      <h1 className="text-lg">Next.Js Performance Playground</h1>
 
-      <section>
+      <section className="min-h-screen grid grid-cols-3 gap-4">
+        <Card image={cardImage} title="Card 1" description="Description 1" />
+        <Card image={cardImage} title="Card 1" description="Description 1" />
+        <Card image={cardImage} title="Card 1" description="Description 1" />
         <Card image={cardImage} title="Card 1" description="Description 1" />
         <Card image={cardImage} title="Card 1" description="Description 1" />
         <Card image={cardImage} title="Card 1" description="Description 1" />
