@@ -46,7 +46,7 @@ const SWRPage = () => {
   return (
     <SWRCacheProvider>
       <div className="grid gap-8">
-        <h1>Next.js Image component</h1>
+        <h1>SWR in Next.js</h1>
 
         <section>
           <h2 className="mb-2">Demo</h2>
