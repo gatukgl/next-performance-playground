@@ -1,4 +1,7 @@
 import { Code } from '../../components/Code'
+import dynamic from 'next/dynamic'
+
+const ChartComponent = dynamic(() => import('./LargeComponent'))
 
 const CodeSplittingPage = () => {
   const code = ``
@@ -9,6 +12,7 @@ const CodeSplittingPage = () => {
 
       <section>
         <h2 className="mb-2">Demo</h2>
+        <ChartComponent />
       </section>
 
       <section>
