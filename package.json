@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "performance": "unlighthouse --site http://localhost:3000"
+    "performance:dt": "unlighthouse --site http://localhost:3000 --debug --desktop",
+    "performance:mb": "unlighthouse --site http://localhost:3000 --debug"
   },
   "dependencies": {
     "next": "14.2.5",
