@@ -1,8 +1,6 @@
-'use client'
-
 import Image from 'next/image'
-import { CodeBlock, nord } from 'react-code-blocks'
 import image from '../../../public/card-img.jpg'
+import { Code } from '../../components/Code'
 
 const NextImagePage = () => {
   const code = `import Image from 'next/image'
@@ -32,11 +30,7 @@ const NextImagePage = () => {
 
       <section>
         <h2 className="mb-2">Code Block</h2>
-        <CodeBlock
-          text={code}
-          language="tsx"
-          theme={nord}
-        />
+        <Code code={code} />
       </section>
     </div>
   )
