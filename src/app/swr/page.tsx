@@ -1,21 +1,30 @@
 'use client'
 
 import { useState } from 'react'
-import useSWR, { useSWRConfig } from 'swr'
-import { Code } from '../../components/Code'
+import useSWR, { useSWRConfig, mutate } from 'swr'
 import { SWRCacheProvider } from './SWRCacheProvider'
+
+type BreedType = {
+  id: string
+  attributes: {
+    name: string
+    description: string
+  }
+}
 
 const SWRPage = () => {
   const [isShowDogBreeds, setIsShowDogBreeds] = useState(false)
   const { cache } = useSWRConfig()
 
-  const code = ''
   const apiUrl = 'https://dogapi.dog/api/v2/breeds'
 
   const fetcher = async (apiUrl: string) => {
     try {
-      const data = await fetch(apiUrl)
-      return await data.json()
+      const response = await fetch(apiUrl)
+      const jsonResponse = await response.json()
+      const data = jsonResponse.data
+      mutate(apiUrl, data, false)
+      return data
     } catch (error) {
       console.error('Cannot fetch dog breeds from API', error)
       return null
@@ -55,9 +64,8 @@ const SWRPage = () => {
               isShowDogBreeds && (
                 <>
                   <h3 className='mb-2'>Dog Breeds</h3>
-
                   {
-                    data?.data?.map((breed: any) => (
+                    cache.get(apiUrl)?.data.map((breed: BreedType) => (
                       <div key={breed.id} className="mb-4">
                         <p><label className='font-bold'>Name:</label> <span>{breed.attributes.name}</span></p>
                         <p><label className='font-bold'>Description:</label> <span>{breed.attributes.description}</span></p>
@@ -72,7 +80,6 @@ const SWRPage = () => {
 
         <section>
           <h2 className="mb-2">Code Block</h2>
-          <Code code={code} />
         </section>
       </div>
     </SWRCacheProvider>
