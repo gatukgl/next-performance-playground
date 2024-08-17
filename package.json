@@ -16,6 +16,7 @@
     "react-code-blocks": "^0.1.6",
     "react-dom": "^18",
     "recharts": "^2.12.7",
+    "swr": "^2.2.5",
     "unlighthouse": "^0.13.2"
   },
   "devDependencies": {
