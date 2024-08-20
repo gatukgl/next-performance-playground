@@ -15,10 +15,10 @@ const NextImagePage = () => {
 
   return (
     <div className="grid gap-8">
-      <h1>Next.js Image component</h1>
+      <h1 className="text-lg font-bold">Next.js Image component</h1>
 
       <section>
-        <h2 className="mb-2">Demo</h2>
+        <h2 className="mb-2 font-bold">Demo</h2>
         <Image
           src={image}
           alt="Sunset in the mountains"
@@ -29,7 +29,7 @@ const NextImagePage = () => {
       </section>
 
       <section>
-        <h2 className="mb-2">Code Block</h2>
+        <h2 className="mb-2 font-bold">Code Block</h2>
         <Code code={code} />
       </section>
     </div>

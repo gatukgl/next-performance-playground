@@ -46,10 +46,10 @@ const SWRPage = () => {
   return (
     <SWRCacheProvider>
       <div className="grid gap-8">
-        <h1>SWR in Next.js</h1>
+        <h1 className="text-lg font-bold">SWR in Next.js</h1>
 
         <section>
-          <h2 className="mb-2">Demo</h2>
+          <h2 className="mb-2 font-bold">Demo</h2>
 
           <div>
             <button
@@ -57,13 +57,13 @@ const SWRPage = () => {
               onClick={handleOnClick}
               onMouseOver={handleOnHover}
             >
-              See dog breeds
+              {isShowDogBreeds ? 'Hide' : 'See'} dog breeds
             </button>
 
             {
               isShowDogBreeds && (
-                <>
-                  <h3 className='mb-2'>Dog Breeds</h3>
+                <div className="bg-white mt-2 p-8">
+                  <h3 className='mb-2 font-bold'>Dog Breeds</h3>
                   {
                     cache.get(apiUrl)?.data.map((breed: BreedType) => (
                       <div key={breed.id} className="mb-4">
@@ -72,14 +72,10 @@ const SWRPage = () => {
                       </div>
                     ))
                   }
-                </>
+                </div>
               )
             }
           </div>
-        </section>
-
-        <section>
-          <h2 className="mb-2">Code Block</h2>
         </section>
       </div>
     </SWRCacheProvider>
