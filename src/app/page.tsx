@@ -1,7 +1,18 @@
+'use client'
+
+import React, { useEffect } from 'react'
+import TagManager from 'react-gtm-module';
 import { Card } from "@/components/Card";
 import cardImage from '../../public/card-img.jpg';
 
 export default function Home() {
+  useEffect(() => {
+  const tagManagerArgs = {
+    gtmId: 'G-RNRNQ0TXC4'
+  };
+  TagManager.initialize(tagManagerArgs)
+  }, [])
+
   return (
     <main className="grid gap-12">
       <h1 className="text-lg">Next.Js Performance Playground</h1>

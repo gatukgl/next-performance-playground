@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.2.5",
+    "@types/react-gtm-module": "^2.0.4",
     "next": "14.2.5",
     "react": "^18",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^18",
+    "react-gtm-module": "^2.0.11",
     "recharts": "^2.12.7",
     "swr": "^2.2.5",
     "unlighthouse": "^0.13.2"
