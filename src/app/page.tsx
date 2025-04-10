@@ -8,7 +8,7 @@ import cardImage from '../../public/card-img.jpg';
 export default function Home() {
   useEffect(() => {
   const tagManagerArgs = {
-    gtmId: 'G-RNRNQ0TXC4'
+    gtmId: 'GTM-P4ZDCZZG'
   };
   TagManager.initialize(tagManagerArgs)
   }, [])
